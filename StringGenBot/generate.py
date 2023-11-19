@@ -77,9 +77,9 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
             return
         api_hash = api_hash_msg.text
     if not is_bot:
-        t = "**⎆┊ يـرجـى إرسـال رقـم هاتفـك مـع رمـز الدولةn/مثــال 📱: +96479702387**"
+        t = "**⎆┊ يـرجـى إرسـال رقـم هاتفـك مـع رمـز الدولة\nمثــال 📱: +96479702387**"
     else:
-        t = "⎆┊ ** يرجـى إرسـال توكـن بوتـكn/مثــال ⭐ : 5396274279:hshhshshshshss**"
+        t = "⎆┊ ** يرجـى إرسـال توكـن بوتـك\nمثــال ⭐ : 5396274279:hshhshshshshss**"
     phone_number_msg = await bot.ask(user_id, t, filters=filters.text)
     if await cancelled(phone_number_msg):
         return
@@ -127,16 +127,16 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
             else:
                 await client.sign_in(phone_number, code.phone_code_hash, phone_code)
         except (PhoneCodeInvalid, PhoneCodeInvalidError):
-            await msg.reply("⎆┊ الكـود الخـاص بـك غير صالـحn/أعد استخـراج الجلسـة مـرة أخـرى", reply_markup=InlineKeyboardMarkup(gen_button))
+            await msg.reply("⎆┊ الكـود الخـاص بـك غير صالـح\nأعد استخـراج الجلسـة مـرة أخـرى", reply_markup=InlineKeyboardMarkup(gen_button))
             return
         except (PhoneCodeExpired, PhoneCodeExpiredError):
-            await msg.reply("⎆┊ انتهت مـدة الكـودn/أعـد استخـراج الجلسـة مـرة أخـرى", reply_markup=InlineKeyboardMarkup(gen_button))
+            await msg.reply("⎆┊ انتهت مـدة الكـود\nأعـد استخـراج الجلسـة مـرة أخـرى", reply_markup=InlineKeyboardMarkup(gen_button))
             return
         except (SessionPasswordNeeded, SessionPasswordNeededError):
             try:
                 two_step_msg = await bot.ask(user_id, "**⎆┊ يـرجـى إرسـال التحقق الخـاص بحسـابك ..**", filters=filters.text, timeout=300)
             except TimeoutError:
-                await msg.reply("**⎆┊ انقضـت المدةn/أعـد استخـراج الجلسـة مـرة أخـرى .**", reply_markup=InlineKeyboardMarkup(gen_button))
+                await msg.reply("**⎆┊ انقضـت المدة\nأعـد استخـراج الجلسـة مـرة أخـرى .**", reply_markup=InlineKeyboardMarkup(gen_button))
                 return
             try:
                 password = two_step_msg.text

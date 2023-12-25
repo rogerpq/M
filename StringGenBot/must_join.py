@@ -6,12 +6,12 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForb
 
 
 @Client.on_message(filters.incoming & filters.private, group=-1)
-async def must_join_channel(bot: Client, msg: Message):
+async def must_join_channel(Client: Client, msg: Message):
     if not MUST_JOIN:
         return
     try:
         try:
-            await Client.get_chat_member(MUST_JOIN, msg.from_user.id)
+            await Client.get_chat_member(MUST_JOIN, Client.from_user.id)
         except UserNotParticipant:
             if MUST_JOIN.isalpha():
                 link = "https://t.me/" + MUST_JOIN

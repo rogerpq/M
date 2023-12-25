@@ -1,4 +1,4 @@
-from config import MUST_JOIN
+from ...config import MUST_JOIN
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
@@ -11,15 +11,15 @@ async def must_join_channel(bot: Client, msg: Message):
         return
     try:
         try:
-            await bot.get_chat_member(MUST_JOIN, msg.from_user.id)
+            await Client.get_chat_member(MUST_JOIN, msg.from_user.id)
         except UserNotParticipant:
             if MUST_JOIN.isalpha():
                 link = "https://t.me/" + MUST_JOIN
             else:
-                chat_info = await bot.get_chat(MUST_JOIN)
+                chat_info = await Client.get_chat(MUST_JOIN)
                 link = chat_info.invite_link
             try:
-                await msg.reply_photo(
+                await Client.reply_photo(
                     photo="https://telegra.ph/file/5eb95caa40488cea43cd3.jpg", caption=f"» عـذرًا عـزيـزي عليك الاشتـراك في قنـاة البـوت !",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -29,7 +29,7 @@ async def must_join_channel(bot: Client, msg: Message):
                         ]
                     )
                 )
-                await msg.stop_propagation()
+                await Client.stop_propagation()
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:

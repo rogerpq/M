@@ -9,5 +9,5 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 OWNER_ID = int(getenv("OWNER_ID"))
 
-MONGO_DB_URI = getenv("MONGO_DB_URI")
+MONGO_DB_URI = os.environ.get("SCALINGO_MONGODB_URL", None)
 MUST_JOIN = getenv("MUST_JOIN", "Repthon")

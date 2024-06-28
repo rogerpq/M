@@ -1,7 +1,9 @@
+flask
+flask_restful
 motor==3.1.1
 psutil==5.9.4
 pyromod==1.5
 pyrogram
 python-dotenv==1.0.0
-telethon==1.32.1
+telethon==1.36.0
 tgcrypto==1.2.5

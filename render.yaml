@@ -1,0 +1,27 @@
+mongodb:
+  - name: baqir
+    ipAllowList: []
+    region: frankfurt
+    plan: free
+services:
+  - type: web
+    name: baqir
+    plan: free
+    env: python
+    buildCommand: pip install -U -r requirements.txt
+    startCommand: python3 repth.py & python3 main.py
+    region: frankfurt
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.10.9
+      - key: MONGO_DB_URI
+        fromMongodb:
+          name: baqir
+          property: connectionString   
+    autoDeploy: false

@@ -12,7 +12,7 @@
             "required": true,
             "value":""
         },
-        "APP_ID": {
+        "API_ID": {
             "description": "كـود ايبي ايـدي〔 App id 〕اتركـه كمـا هــو",
             "required": true,
             "value":"13740761"

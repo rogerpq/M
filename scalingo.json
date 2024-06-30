@@ -2,7 +2,7 @@
     "name": "سـورس ريبـــثون - 𝗦𝗼𝘂𝗿𝗰𝗲 𝗥𝗲𝗽𝘁𝗵𝗼𝗻",
     "description": "• تنصيب سـورس ريبـــثون مجاناً علـى منصـة سكـالينجـو • افضـل سـورسـات يـوزربـوت العربيـة",
     "addons": ["scalingo-mongodb"],
-    "keywords": ["python", "ai","telegram","bot"],
+    "keywords": ["python", "ai","telegram"],
     "repository": "https://github.com/rogerpq/BOT-GEN",
     "logo": "https://graph.org/file/5d3e657e910057f03a8aa.jpg",
     "stack": "container",

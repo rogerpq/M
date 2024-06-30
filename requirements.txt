@@ -1,8 +1,7 @@
-dotenv
-motor==3.1.1
-psutil==5.9.4
-pyromod==1.5
+motor
+psutil
+pyromod
 pyrogram
-python-dotenv==1.0.0
+python-dotenv
 telethon==1.36.0
-tgcrypto==1.2.5
+tgcrypto

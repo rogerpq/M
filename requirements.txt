@@ -7,5 +7,6 @@ pyrogram
 python-dotenv
 telethon==1.36.0
 tgcrypto
+psycopg2-binary
 psycopg2
 sqlalchemy==1.4.21

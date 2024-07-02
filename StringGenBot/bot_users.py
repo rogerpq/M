@@ -1,4 +1,4 @@
-from StringGenBot.db.users_sql import Users, num_users
+from StringGenBot.db.users import Users, num_users
 from StringGenBot.db import SESSION
 from pyrogram import Client, filters
 from pyrogram.types import Message

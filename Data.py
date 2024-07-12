@@ -30,6 +30,7 @@ class Data:
             InlineKeyboardButton("كيـفية استـخدامي", callback_data="help"),
             InlineKeyboardButton("معـلومات", callback_data="about")
       ]
+    ]
 
 
     # Help Message

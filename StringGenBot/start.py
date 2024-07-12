@@ -1,34 +1,16 @@
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-
 from config import OWNER_ID
+from Data import Data
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup
 
 
-def filter(cmd: str):
-    return filters.private & filters.incoming & filters.command(cmd)
-
-@Client.on_message(filter("start"))
-async def start(bot: Client, msg: Message):
-    me2 = (await bot.get_me()).mention
-    await bot.send_message(
-        chat_id=msg.chat.id,
-        text=f"""**- مرحـبـًا عـزيـزي 🙋** {msg.from_user.mention},
-في {me2},
-**- لبـدء استخـراج الجلسة اختـر بـدء استخـراج الجلسـة .**
-**- إذا كنـت تريـد أن يكون حسـابك في أمـان تام فاختر بايروجـرام أمـا إذا كـان رقمك حقيقـي فاختر تيرمـكس .**
-** - ملاحظـة :**
-**- احـذر مشاركـة الكود لأحـد لأنه يستطيـع اختراق حسـابك ⚠️ .**
-المطـور : [𓆩𝐁𝐀𝐐𝐈𝐑𓆪](tg://openmessage?user_id={OWNER_ID}) !""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")
-                ],
-                [
-                    InlineKeyboardButton("- قنـاة السـورس .", url="https://t.me/Repthon"),
-                    InlineKeyboardButton("- المطـور .", user_id=OWNER_ID)
-                ]
-            ]
-        ),
-        disable_web_page_preview=True,
+# Start Message
+@Client.on_message(filters.private & filters.incoming & filters.command("start"))
+async def start(bot, msg):
+	user = await bot.get_me()
+	mention = user["mention"]
+	await bot.send_message(
+		msg.chat.id,
+		Data.START.format(msg.from_user.mention, mention),
+		reply_markup=InlineKeyboardMarkup(Data.buttons)
     )

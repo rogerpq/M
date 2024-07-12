@@ -1,10 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from Data import Data
-from config import OWNER_ID
 
-
-# Start Message
+#Start Message
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
 async def start(bot: Client, msg: Message):
 	user = (await bot.get_me()).mention

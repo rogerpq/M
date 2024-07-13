@@ -12,7 +12,7 @@ class Data:
 المطـور : [𓆩𝐁𝐀𝐐𝐈𝐑𓆪](tg://openmessage?user_id=5502537272) !"""
 
     buttons = [
-        [InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")],
+        [InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")],
         [InlineKeyboardButton("قـناة الـسورس", url="https://t.me/Repthon")],
         [InlineKeyboardButton("الـمـطـور", url="https://telegram.dog/E_7_V")],
         [

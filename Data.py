@@ -13,11 +13,11 @@ class Data:
 
     buttons = [
         [InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")],
-        [InlineKeyboardButton("قـناة الـسورس", url="https://t.me/Repthon")],
+        [InlineKeyboardButton(text="قـناة الـسورس", url="https://t.me/Repthon")],
         [InlineKeyboardButton("الـمـطـور", url="https://telegram.dog/E_7_V")],
         [
-            InlineKeyboardButton("كيـفية استـخدامي", callback_data="HELP"),
-            InlineKeyboardButton("معـلومات", callback_data="about")
+            InlineKeyboardButton(text="كيـفية استـخدامي", callback_data="HELP"),
+            InlineKeyboardButton(text="معـلومات", callback_data="about")
       ]
     ]
 

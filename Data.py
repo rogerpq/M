@@ -11,23 +11,12 @@ class Data:
 **- احـذر مشاركـة الكود لأحـد لأنه يستطيـع اختراق حسـابك ⚠️ .**
 المطـور : [𓆩𝐁𝐀𝐐𝐈𝐑𓆪](tg://openmessage?user_id=5502537272) !"""
 
-    # Home Button
-    home_buttons = [
-        [InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")],
-        [InlineKeyboardButton(text="الـعـودة للـبداية", callback_data="home")]
-    ]
-
-    generate_button = [
-        [InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")]
-    ]
-
-    # Rest Buttons
     buttons = [
         [InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")],
         [InlineKeyboardButton("قـناة الـسورس", url="https://t.me/Repthon")],
         [InlineKeyboardButton("الـمـطـور", url="https://telegram.dog/E_7_V")],
         [
-            InlineKeyboardButton("كيـفية استـخدامي", callback_data="help"),
+            InlineKeyboardButton("كيـفية استـخدامي", callback_data="HELP"),
             InlineKeyboardButton("معـلومات", callback_data="about")
       ]
     ]

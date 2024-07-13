@@ -3,8 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 class Data:
     # Start Message
-    START = """
-**- مرحـبـاً عـزيـزي 🙋** {},
+    START = f"""**- مرحـبـاً عـزيـزي 🙋** {},
 **- لبـدء استخـراج الجلسة اختـر بـدء استخـراج الجلسـة .**
 **- إذا كنـت تريـد أن يكون حسـابك في أمـان تام فاختر بايروجـرام أمـا إذا كـان رقمك حقيقـي فاختر تيرمـكس .**
 ** - ملاحظـة :**
@@ -14,11 +13,7 @@ class Data:
     buttons = [
         [InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")],
         [InlineKeyboardButton(text="قـناة الـسورس", url="https://t.me/Repthon")],
-        [InlineKeyboardButton("الـمـطـور", url="https://telegram.dog/E_7_V")],
-        [
-            InlineKeyboardButton(text="كيـفية استـخدامي", callback_data="HELP"),
-            InlineKeyboardButton(text="معـلومات", callback_data="about")
-      ]
+        [InlineKeyboardButton(text="الـمـطـور", url="https://telegram.dog/E_7_V")],
     ]
 
 

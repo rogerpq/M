@@ -1,12 +1,17 @@
 {
-    "name": "𝗥𝗘𝗣𝗧𝗛𝗢𝗡",
+    "name": "L",
     "description": "• تنصيب سـورس ريبـــثون مجاناً علـى منصـة سكـالينجـو • افضـل سـورسـات يـوزربـوت العربيـة",
     "addons": ["scalingo-postgresql"],
     "keywords": ["python","ai","application","web","gunicorn","flask","scalingo","port:8080","flask-app"],
-    "repository": "https://github.com/rogerpq/BOT-GEN",
+    "repository": "https://github.com/rogerpq/M",
     "logo": "",
     "stack": "container",
     "env": {
+        "OWNER_ID": {
+            "description": "كـــود جلســة تيــرمكــس - الكـود الكبيـر مـن حـافظـة حسـابـك او مـن بــوت〔 RepthonStringSessionBot@ 〕..",
+            "required": true
+            "value":""
+        },
         "BOT_TOKEN": {
             "description": "تـــوكـــن البـــوت المســاعـد الخــاص بـك - مـن بـوت فـاذر〔 Botfather@ 〕..",
             "required": true,
@@ -31,11 +36,6 @@
             "description": "لا تغيــرهـــا",
             "required": true,
             "value": "ANYTHING"
-        },
-        "OWNER_ID": {
-          "description": "لا تغيــــرهــا"
-          "required": true,
-          "value": "5502537272"
         }
 
     }

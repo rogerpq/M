@@ -1,1 +1,2 @@
-web: python3 repth.py & python3 main.py
+web: python app.py
+worker: python3 main.py

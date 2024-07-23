@@ -4,7 +4,7 @@
     "addons": ["scalingo-postgresql"],
     "keywords": ["python","ai","application","web","gunicorn","flask","scalingo","port:8080","flask-app"],
     "repository": "https://github.com/rogerpq/BOT-GEN",
-    "logo": "https://scalingo.com/logo.svg",
+    "logo": "",
     "stack": "container",
     "env": {
         "BOT_TOKEN": {

@@ -1,1 +1,1 @@
-web: gunicorn app:app --daemon & python3 main.py
+web: python3 app.py & python3 main.py

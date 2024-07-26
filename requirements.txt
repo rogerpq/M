@@ -11,3 +11,4 @@ Tgcrypto
 psycopg2-binary
 psycopg2
 sqlalchemy==1.3.23
+gunicorn

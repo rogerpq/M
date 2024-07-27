@@ -10,7 +10,7 @@ if ENVIRONMENT:
     API_HASH = os.environ.get("API_HASH", None)
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
     DATABASE_URL = os.environ.get("DATABASE_URL", None)
-    DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+    DATABASE_URL = DATABASE_URL.replace("postgres:", "postgresql:")
     OWNER_ID = os.environ.get("OWNER_ID", "5502537272")
     MUST_JOIN = os.environ.get("MUST_JOIN", "Repthon")
     if MUST_JOIN.startswith("@"):
@@ -21,7 +21,7 @@ else:
     API_HASH = ""
     BOT_TOKEN = ""
     DATABASE_URL = ""
-    DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+    DATABASE_URL = DATABASE_URL.replace("postgres:", "postgresql:")
     OWNER_ID = "5502537272"
     MUST_JOIN = "Repthon"
     if MUST_JOIN.startswith("@"):
